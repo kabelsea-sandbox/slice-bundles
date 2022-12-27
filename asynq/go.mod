@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/hibiken/asynq v0.23.0
 	github.com/kabelsea-sandbox/slice v1.2.0
-	go.uber.org/zap v1.23.0
+	github.com/pkg/errors v0.9.1
 )
 
 require (
@@ -16,12 +16,10 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0 // indirect
 	github.com/oklog/run v1.1.0 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
-	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/automaxprocs v1.5.1 // indirect
-	go.uber.org/multierr v1.8.0 // indirect
+	go.uber.org/goleak v1.1.11 // indirect
 	golang.org/x/sys v0.1.0 // indirect
 	golang.org/x/time v0.1.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
