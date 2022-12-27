@@ -1,4 +1,4 @@
-module github.com/kabelsea-sandbox/slice-bundles/asynq
+module asynq
 
 go 1.19
 
