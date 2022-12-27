@@ -1,4 +1,4 @@
-module clickhouse
+module github.com/kabelsea-sandbox/slice-bundles/clickhouse
 
 go 1.19
 
