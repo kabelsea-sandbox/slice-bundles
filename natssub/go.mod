@@ -1,4 +1,4 @@
-module natssub
+module github.com/kabelsea-sandbox/slice-bundles/natssub
 
 go 1.19
 
