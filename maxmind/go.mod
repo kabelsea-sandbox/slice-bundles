@@ -1,4 +1,4 @@
-module github.com/kabelsea-sandbox/slice-bundles/geoip
+module github.com/kabelsea-sandbox/slice-bundles/maxmind
 
 go 1.19
 

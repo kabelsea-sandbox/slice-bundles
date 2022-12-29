@@ -1,4 +1,4 @@
-package geoip
+package maxmind
 
 import (
 	"github.com/kabelsea-sandbox/slice"

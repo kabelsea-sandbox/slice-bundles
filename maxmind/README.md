@@ -1,4 +1,4 @@
-# geoip bundle
+# maxmind bundle
 
 Bundle provide maxmind geoip
 
