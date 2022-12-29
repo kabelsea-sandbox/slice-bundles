@@ -4,5 +4,6 @@ use (
 	./asynq
 	./clickhouse
 	./clickhouse-uptrace
+	./geoip
 	./natssub
 )
