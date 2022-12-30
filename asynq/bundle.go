@@ -51,6 +51,25 @@ func (b *Bundle) Build(builder slice.ContainerBuilder) {
 	}
 }
 
+// Boot implements Bundle interface
+func (b *Bundle) Boot(_ context.Context, container slice.Container) error {
+	var handlers []Handler
+
+	if container.Has(&handlers) {
+		if err := container.Resolve(&handlers); err != nil {
+			return err
+		}
+
+		for _, handler := range handlers {
+			if err := container.Invoke(b.RegisterHandler(handler)); err != nil {
+				return err
+			}
+		}
+
+	}
+	return nil
+}
+
 // Shutdown implements Bundle interface.
 func (b *Bundle) Shutdown(_ context.Context, _ slice.Container) (err error) {
 	if b.Client {
@@ -89,4 +108,10 @@ func (b *Bundle) NewServer() *asynq.Server {
 
 func (b *Bundle) NewServeMux() *asynq.ServeMux {
 	return asynq.NewServeMux()
+}
+
+func (b *Bundle) RegisterHandler(handler Handler) func(mux *asynq.ServeMux) {
+	return func(mux *asynq.ServeMux) {
+		mux.Handle(handler.Task(), handler)
+	}
 }
